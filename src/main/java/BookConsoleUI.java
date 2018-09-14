@@ -1,7 +1,12 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class BookConsoleUI {
     public void start() {
+        BookFileConnector bookFileConnector = new BookFileConnector();
         Ledger ledger = new Ledger();
         Scanner sc = new Scanner(System.in);
         boolean status = true;
