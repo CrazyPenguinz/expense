@@ -1,14 +1,24 @@
 public class Information {
     private String type, detail;
-    private double amount;
+    private String amount;
 
-    public Information(String type, String detail, double amount) {
+    public Information(String type, String detail, String amount) {
         this.amount = amount;
         this.type = type;
         this.detail = detail;
     }
 
+    public String getType() {
+        return type;
+    }
 
+    public String getDetail() {
+        return detail;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
 
     @Override
     public String toString() {
