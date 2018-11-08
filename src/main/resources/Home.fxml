@@ -22,5 +22,6 @@
       </TableView>
       <Label fx:id="label" layoutX="33.0" layoutY="146.0" prefHeight="169.0" prefWidth="152.0" />
       <Button fx:id="totalButton" layoutX="131.0" layoutY="158.0" mnemonicParsing="false" onAction="#showTotal" text="Total" />
+      <Button fx:id="swButton" layoutX="15.0" layoutY="158.0" mnemonicParsing="false" onAction="#switchDB" text="Switch DataBase" />
    </children>
 </AnchorPane>

@@ -2,3 +2,5 @@ Income nice earn +100
 Expense mote pay -50
 Income tum earn +30
 Income tum earn +500
+Expense tum pay -100
+Expense nice pay -50

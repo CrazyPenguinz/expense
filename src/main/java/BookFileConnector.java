@@ -7,12 +7,19 @@ import java.util.ArrayList;
 /**
  * Created by 708 on 9/14/2018.
  */
-public class BookFileConnector {
+public class BookFileConnector implements Connectable{
     private static final String fileName = "tmp.txt";
     private static String line = null;
 
+    private static final BookFileConnector instance = new BookFileConnector();
 
-    static public ObservableList<Information> viewHistory() {
+    static public BookFileConnector getInstance() {
+        return instance;
+    }
+
+    private BookFileConnector() {}
+
+    public ObservableList<Information> viewHistory() {
         ObservableList<Information> informations = FXCollections.observableArrayList();
         try {
             FileReader fileReader = new FileReader(fileName);
@@ -30,11 +37,11 @@ public class BookFileConnector {
         return informations;
     }
 
-    static public void add(String detail) {
+    public void add(String type, String detail, String amount) {
         try {
             FileWriter fileWriter = new FileWriter(fileName, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            bufferedWriter.write(detail);
+            bufferedWriter.write(type + " " + detail + " " + amount);
             bufferedWriter.newLine();
             bufferedWriter.close();
         }

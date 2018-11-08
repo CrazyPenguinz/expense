@@ -3,9 +3,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TempMain {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
 
-        Information information = context.getBean("information", Information.class);
+//        Information information = context.getBean("information", Information.class);
 
     }
 }
